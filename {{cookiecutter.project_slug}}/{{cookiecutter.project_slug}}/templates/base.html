@@ -1,4 +1,4 @@
-{% raw %}{% load static i18n {% endraw %}
+{% raw %}{% load static tailwind_tags i18n {% endraw %}
 {%- if cookiecutter.frontend_pipeline == 'Django Compressor' %}compress
 {%- endif %}{% raw %}%}{% endraw %}
 {%- if cookiecutter.frontend_pipeline == 'Webpack' %}{% raw %}{% load render_bundle from webpack_loader %}{% endraw %}
@@ -25,7 +25,7 @@
     {%- endif %}
     {%- raw %}
     <!-- Your stuff: Third-party CSS libraries go here -->
-
+    {% raw %}{% tailwind_css %}{% endraw %}
     <!-- This file stores project-specific CSS -->
     {%- endraw %}{% if cookiecutter.frontend_pipeline == 'None' %}{% raw %}
     <link href="{% static 'css/project.css' %}" rel="stylesheet">

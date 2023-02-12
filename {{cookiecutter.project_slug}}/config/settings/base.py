@@ -90,6 +90,9 @@ THIRD_PARTY_APPS = [
 {%- if cookiecutter.frontend_pipeline == 'Webpack' %}
     "webpack_loader",
 {%- endif %}
+    "tailwind",
+    "theme",
+    "django_browser_reload",
 ]
 
 LOCAL_APPS = [
@@ -154,6 +157,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
@@ -374,3 +378,11 @@ WEBPACK_LOADER = {
 {%- endif %}
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

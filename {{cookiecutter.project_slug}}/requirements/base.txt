@@ -49,3 +49,4 @@ drf-spectacular==0.25.1  # https://github.com/tfranzel/drf-spectacular
 {%- if cookiecutter.frontend_pipeline == 'Webpack' %}
 django-webpack-loader==1.8.1  # https://github.com/django-webpack/django-webpack-loader
 {%- endif %}
+django-tailwind==3.4.0  # https://github.com/timonweb/django-tailwind
