@@ -25,7 +25,7 @@
     {%- endif %}
     {%- raw %}
     <!-- Your stuff: Third-party CSS libraries go here -->
-    {% raw %}{% tailwind_css %}{% endraw %}
+    {% tailwind_css %}
     <!-- This file stores project-specific CSS -->
     {%- endraw %}{% if cookiecutter.frontend_pipeline == 'None' %}{% raw %}
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
