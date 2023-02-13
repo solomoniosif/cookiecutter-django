@@ -1,4 +1,4 @@
-{% raw %}{% load static tailwind_tags i18n {% endraw %}
+ {% raw %}{% load static tailwind_tags i18n {% endraw %}
 {%- if cookiecutter.frontend_pipeline == 'Django Compressor' %}compress
 {%- endif %}{% raw %}%}{% endraw %}
 {%- if cookiecutter.frontend_pipeline == 'Webpack' %}{% raw %}{% load render_bundle from webpack_loader %}{% endraw %}
